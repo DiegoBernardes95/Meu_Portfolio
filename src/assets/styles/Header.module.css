@@ -1,0 +1,97 @@
+.myCard {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 5rem 0 5rem;
+    gap: 7rem;
+    color: #fff; 
+}
+.myCard p, q{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+.myCard q{
+    color: #fcb201;
+    font-size: 40px;
+}
+.myCard a{
+    text-decoration: none;
+    color: #fff;
+}
+.cardMe {
+    display: flex;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.infoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    flex: 50%;
+}
+.infoCard h1 {
+    color: #fcb201;
+    font-family: 'Ultra', 'serif';
+}
+.infoCard h1::after{
+    content: 'Diego Bernardes!';
+    text-shadow: 0 5.5px #C40800;
+}
+.infoCard p{
+    text-align: start;
+}
+.listRedes{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 60%;
+}
+.listRedes img{
+    width: 60px;
+    height: 60px;
+}
+.listRedes img:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+}
+.listRedes p{
+    margin-top: .4rem;
+    font-family: 'Ultra', 'serif';
+    font-size: 14px;
+}
+
+.imgCard {
+    flex: 7rem;
+    transform: translateY(5rem);
+}
+.imgCard img{
+    height: auto;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+@media(max-width: 1400px){
+    .myCard{
+        padding: 8rem 0 8rem;
+        font-size: 15px;
+    }
+    .myCard p, h1, q{
+        margin: 0 1rem 0 1.3rem;
+    }
+    .cardMe{
+        flex-direction: column;
+    }
+    .listRedes{
+        width: auto;
+        transform: translateX(-.8rem);
+        
+    }
+    .imgCard{
+        display: none;
+    }
+    
+}

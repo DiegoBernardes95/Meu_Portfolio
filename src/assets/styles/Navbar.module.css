@@ -1,0 +1,42 @@
+ .navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #fcb201;
+    padding: 1.2rem;
+}
+
+.navBar h2{
+    font-family: 'Ultra', serif;
+}
+
+.listNavbar{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    transform: translateY(.3rem);
+}
+
+.listNavbar a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 900px) {
+    .navBar{
+        flex-direction: column;
+        text-align: center;
+    }
+    .navBar{
+        padding: 1.6rem;
+    }
+    .listNavbar{
+        margin-top: 2rem;
+        font-size: 26px;
+        gap: 2.3rem;
+        transform: translateX(-1.1rem);
+    }
+}

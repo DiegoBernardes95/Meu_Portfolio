@@ -1,0 +1,51 @@
+.tecnologias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 3rem 9rem 3rem;
+}
+.textTecno{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.textTecno p{
+    margin: 2rem 6rem 0 6rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+.textTecno h1{
+    font-family: 'Ultra', 'serif';
+    color: #fcb201;
+}
+
+.imgTecno{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+.imgTecno img{
+    width: 170px;
+    height: 170px;
+}
+
+.imgTecno img:hover{
+    transform: scale(1.1);
+    transition: all ease-in-out .2s;
+    cursor: pointer;
+}
+
+@media(max-width:1000px){
+    .imgTecno img{
+        width: 120px;
+        height: 120px;
+    }
+    .textTecno p{
+        margin: 2rem 0 0 0;
+    }
+}

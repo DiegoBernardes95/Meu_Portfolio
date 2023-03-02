@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Ultra&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #fcb201;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #000;
+}
