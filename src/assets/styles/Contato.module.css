@@ -1,0 +1,68 @@
+.infoContato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fcb201;
+    padding: 0 0 4rem 0;
+    border-bottom: 1px solid #A00A0B;
+}
+.infoContato h1{
+    font-family: 'Ultra', 'serif';
+}
+.infoContato a{
+    text-decoration: none;
+    color: #000;
+}
+.cardContato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 53rem;
+    height: 40rem; 
+}
+.cardContato ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../imagens/adesivo_nota.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-family: "Amatic SC", cursive;
+    font-size: 35px;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    
+}
+.cardImg{
+    width: 60%;
+}
+.cardImg img{
+    width: 100%;
+    height: auto;
+}
+@media(max-width: 1000px){
+    .cardContato{
+        width: 37rem;
+        height: 28rem;
+        transition: all .2s ease-in-out;
+    }
+    .cardContato ul{
+        font-size: 30px;
+    }
+}
+@media(max-width: 700px){
+    .cardContato{
+        width: 29rem;
+        height: 22rem;
+        transition: all .2s ease-in-out;
+    }
+    .cardContato ul{
+        font-size: 25px;
+    }
+}
