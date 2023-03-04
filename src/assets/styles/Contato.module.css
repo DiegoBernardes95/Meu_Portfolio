@@ -3,7 +3,7 @@
     justify-content: space-around;
     background-color: #fcb201;
     padding: 0 5rem 5rem 5rem;
-    border-bottom: 2px solid red;
+    border-bottom: 3px solid #F3705B;
 }
 .infoContato{
     display: flex;
@@ -46,5 +46,8 @@
     }
     .infoContato{
         width: 100%;
+    }
+    .infoContato ul{
+        justify-content: center;
     }
 }
