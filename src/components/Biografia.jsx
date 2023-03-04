@@ -10,9 +10,9 @@ export default function Biografia() {
             <a name='Sobre'></a>
                 <div className={style.textBio}>
                     <h1>Como tudo começou...</h1>
-                    <p>Comecei minha história no desenvolvimento web em setembro de 2022, através do projeto Programadores Cariocas, da Prefeitura do Rio em parceria com o Resilia Educação e Senac RJ.</p>
-                    <p>Desde então estudo as principais tecnologias presentes no mercado, tanto em back-end quanto em front-end.</p>
-                    <p>Tenho me empenhado para dar início a minha carreira dentro dessa área que aprendi a amar. Quero trabalhar no desenvolvimento de aplicações que auxiliem no cotidiano do máximo de usuários possíveis.</p>
+                    <p><strong>Comecei minha história no desenvolvimento web em setembro de 2022, através do projeto Programadores Cariocas, da Prefeitura do Rio em parceria com o Resilia Educação e Senac RJ.</strong></p>
+                    <p><strong>Desde então estudo as principais tecnologias presentes no mercado, tanto em back-end quanto em front-end.</strong></p>
+                    <p><strong>Tenho me empenhado para dar início a minha carreira dentro dessa área que aprendi a amar. Quero trabalhar no desenvolvimento de aplicações que auxiliem no cotidiano do máximo de usuários possíveis.</strong></p>
                 </div>
                 <div className={style.imgBio}>
                     <img src={PC} alt="pc" />
