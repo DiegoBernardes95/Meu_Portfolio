@@ -11,7 +11,7 @@ export default function Header() {
             <div className={style.cardMe}>
                 <div className={style.infoCard}>
                     <h1>Olá, meu nome é <br /></h1>
-                    <p>Sou carioca desde 1995, e atualmente estudo desenvolvimento web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área tem a oferecer.
+                    <p>Sou carioca desde 1995, e atualmente estudo Desenvolvimento Web FullStack. <br /> Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área tem a oferecer.
                         Estou muito empolgado nesses primeiros passos em minha carreira.</p>
                     <ul className={style.listRedes}>
                         <li>

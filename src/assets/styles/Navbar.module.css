@@ -5,24 +5,31 @@
     width: 100%;
     background-color: #fcb201;
     padding: 1.2rem;
+    z-index: 1;
 }
 
 .navBar h2{
     font-family: 'Ultra', serif;
+    text-shadow: 0 5px #F3705B;
 }
 
 .listNavbar{
     display: flex;
     list-style: none;
     gap: 3rem;
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
     transform: translateY(.3rem);
+}
+.listNavbar li a:hover{
+    color: #fcb201;
+    text-shadow: 1px 1px 1px #000;
+    transition: all ease-in .1s;
 }
 
 .listNavbar a{
     text-decoration: none;
-    color: #000;
+    color: #000000a8;
 }
 
 @media (max-width: 900px) {
@@ -35,7 +42,7 @@
     }
     .listNavbar{
         margin-top: 2rem;
-        font-size: 26px;
+        font-size: 18px;
         gap: 2.3rem;
         transform: translateX(-1.1rem);
     }

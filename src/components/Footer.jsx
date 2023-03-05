@@ -2,6 +2,8 @@ import style from '../assets/styles/Footer.module.css'
 
 export default function Footer(){
 
+    const ano = new Date();
+
     return(
         <div className={style.fooTer}>
             <h2>Diego <br /> Bernardes</h2>
@@ -10,7 +12,7 @@ export default function Footer(){
                 <li><a href="#Tecnologias">Tecnologias</a></li>
                 <li><a href="#Projetos">Projetos</a></li>
             </ul>
-            <h2>©2023</h2>
+            <h6><strong>©{ano.getFullYear()}</strong></h6>
         </div>
     )
 }

@@ -8,15 +8,27 @@
 .fooTer h2{
     font-family: 'Ultra', 'serif';
     font-size: 25px;
+    text-shadow: 0 5px #F3705B;
 }
+.fooTer h6{
+    font-family: 'Inconsolata', monospace;
+    font-size: 18px;
+}
+
 .listFooter{
     display: flex;
     width: 52%;
     justify-content: space-between;
     list-style: none;
     padding: 0;
-    font-family: 'Amatic SC', cursive;
-    font-size: 35px; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px; 
+}
+
+.listFooter li a:hover{
+    color: #fcb201;
+    text-shadow: 1px 1px 1px #000;
+    transition: all ease-in .1s;
 }
 
 .listFooter a{

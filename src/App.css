@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inconsolata:wght@300&family=Pangolin&family=Ultra&display=swap');
 
 *{
     margin: 0;
@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #000;
+    background-image: linear-gradient(to right top, #081b2e, #091725, #07121c, #050c13, #030405);;
 }
+
 
 ::-webkit-scrollbar{
     width: 5px;

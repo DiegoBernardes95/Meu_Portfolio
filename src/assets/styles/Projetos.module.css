@@ -15,10 +15,17 @@
 .textProjetos h1{
     font-family: 'Ultra', 'serif';
     color: #fcb201;
+    text-shadow: 0 5.5px #C40800;
 }
 .textProjetos p{
-    font-family: 'Amatic SC', cursive;
-    font-size: 27px;
+    margin: 2rem 6rem 0 6rem;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 21px;
+}
+.textProjetos a, .listaProjetos a{
+    text-decoration: none;
+    color: #fcb201;
 }
 
 .listaProjetos{
@@ -26,7 +33,7 @@
     justify-content: center;
     width: 90%;
     flex-wrap: wrap;
-    gap: 3.5rem;
+    gap: 4rem;
     margin-top: 4rem;
 }
 .listaProjetos div{
@@ -34,10 +41,27 @@
     flex-direction: column;
     align-items: center;
     width: 22rem;
-    padding: 1rem;
+    padding: 1.2rem;
     border: 2px solid #fcb201;
     border-radius: 5px;
 }
+.listaProjetos div:hover{
+    animation: vaivem normal .7s;
+    transition: ease-in-out box-shadow .5s;
+}
+
+@keyframes vaivem {
+    0%, 10%{
+        transform: scale(.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .listaProjetos h4{
     font-family: 'Ultra', 'serif';
     color: #fcb201;
@@ -46,14 +70,21 @@
     margin-bottom: 1.3rem;
 }
 .listaProjetos p{
-    font-family: 'Amatic SC', cursive;
-    font-size: 20px;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 16px;
     color: #fff;
 }
 
 .listaProjetos video, .listaProjetos img{
-    border: 1px solid #fcb201;
+    border: 2px solid #fcb201;
     border-radius: 5px;
     width: 300px;
     height: 300px;
+}
+
+@media(max-width:1000px){
+    .textProjetos p{
+        margin: 2rem 0 0 0;
+    }
 }

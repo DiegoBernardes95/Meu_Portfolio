@@ -3,7 +3,7 @@
     justify-content: space-around;
     background-color: #fcb201;
     padding: 0 5rem 5rem 5rem;
-    border-bottom: 3px solid #F3705B;
+    border-bottom: 1px solid #000;
 }
 .infoContato{
     display: flex;
@@ -13,10 +13,11 @@
 }
 .infoContato h1{
     font-family: 'Ultra', 'serif';
+    text-shadow: 0 5px #F3705B;
 }
 .infoContato p{
-    font-family: 'Amatic SC', serif;
-    font-size: 25px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
 }
 
 .infoContato ul{
@@ -25,6 +26,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+.infoContato ul img:hover{
+    transform: scale(1.1);
+    transition: all ease-in .1s;
 }
 
 .contatoImg{
