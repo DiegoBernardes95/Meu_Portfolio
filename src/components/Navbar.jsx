@@ -10,6 +10,7 @@ export default function Navbar() {
                 <li><a href='#Sobre'>Sobre</a></li>
                 <li><a href='#Tecnologias'>Tecnologias</a></li>
                 <li><a href="#Projetos">Projetos</a></li>
+                <li><a href="#Contato">Contatos</a></li>
             </ul>
         </div>
     )

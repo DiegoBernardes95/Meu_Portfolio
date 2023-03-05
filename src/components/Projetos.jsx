@@ -18,7 +18,7 @@ export default function Projeto(){
                 <div>
                     <video autoPlay loop muted src={adoteAqui}></video>
                     <h4>Projeto Adote Aqui</h4>
-                    <p>Um site, utilizando  HTML & CSS, para a ONG fictícia “Adote Aqui”</p>
+                    <p>Um site, utilizando  HTML & CSS, para a ONG fictícia “Adote Aqui”.</p>
                     <a href="https://diegobernardes95.github.io/Projeto-Adote-Aqui/" target='_blank'>Link do Projeto</a>
                 </div>
                 <div>

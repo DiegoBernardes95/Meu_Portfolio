@@ -35,10 +35,36 @@
     color: #fcb201;
     font-family: 'Ultra', 'serif';
 }
+
 .infoCard h1::after{
-    content: 'Diego Bernardes!';
+    content: 'Diego Bernardes...';
     text-shadow: 0 5.5px #C40800;
+    animation: myname ease-in-out 5.5s infinite;
 }
+
+@keyframes myname {
+    0%{content: '|';}
+    10%{content: 'D|';}
+    15%{content: 'Di|';}
+    20%{content: 'Die|';}
+    25%{content: 'Dieg|';}
+    30%{content: 'Diego|';}
+    35%{content: 'Diego |';}
+    40%{content: 'Diego B|';}
+    45%{content: 'Diego Be|';}
+    50%{content: 'Diego Ber|';}
+    55%{content: 'Diego Bern|';}
+    60%{content: 'Diego Berna|';}
+    65%{content: 'Diego Bernar|';}
+    70%{content: 'Diego Bernard|';}
+    75%{content: 'Diego Bernarde|';}
+    80%{content: 'Diego Bernardes|';}
+    85%{content: 'Diego Bernardes.|';}
+    90%{content: 'Diego Bernardes..|';}
+    95%{content: 'Diego Bernardes...|';}
+    100%{content: 'Diego Bernardes...';}
+}
+
 .infoCard p{
     text-align: start;
 }
@@ -86,11 +112,10 @@
     border-radius: 50%;
 }
 .imgCard img:hover{
-    box-shadow: 0 0 7px #fcb201, 0 0 32px #fcb201, 0 0 62px #fcb201;
+    animation: vaivem normal .7s;
     transition: all ease-in-out .3s;
-    border: 6px solid #fcb201;
+    border: 4px solid #fcb201;
 }
-
 
 @media(max-width: 1400px){
     .myCard{

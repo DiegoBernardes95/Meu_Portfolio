@@ -6,9 +6,8 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to right top, #081b2e, #091725, #07121c, #050c13, #030405);;
+    background-image: linear-gradient(to right top, #081b2e, #091725, #07121c, #050c13, #030405);
 }
-
 
 ::-webkit-scrollbar{
     width: 5px;
