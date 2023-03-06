@@ -39,7 +39,7 @@ export default function Header() {
                     <img src={Eu} alt="minha foto" />
                 </div>
             </div>
-            <p><q> Os dois dias mais importantes da sua vida <br /> são o dia em que você nasceu <br /> ... e o dia em que você descobre o porquê.</q><br />Mark Twain</p>
+            <p><q> Os dois dias mais importantes da sua vida são o dia em que você nasceu <br /> ... e o dia em que você descobre o porquê.</q><br />Mark Twain</p>
         </div>
     )
 }
