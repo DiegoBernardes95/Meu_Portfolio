@@ -42,7 +42,7 @@
     font-size: 20px; 
 }
 
-.listFooter li a:hover{
+.listFooter a:hover{
     color: #fcb201;
     text-shadow: 1px 1px 1px #000;
     transition: all ease-in .1s;
@@ -59,15 +59,15 @@
         align-items: unset;
         text-align: center;
     }
-    .listFooter li{
+    .listFooter a{
         padding: .4rem;
     }
-    .listFooter li:hover{
+    .listFooter a:hover{
+        color: #fcb201;
         background-color: #c40800;
         border-radius: 5px;
         transition: all ease-in-out .2s;
     }
-
     .listFooter{
         width: auto;
         text-align: center;
