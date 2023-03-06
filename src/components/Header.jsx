@@ -11,6 +11,7 @@ export default function Header() {
             <div className={style.cardMe}>
                 <div className={style.infoCard}>
                     <h1>Olá, meu nome é <br /></h1>
+                    
                     <p>Sou carioca desde 1995, e atualmente estudo Desenvolvimento Web FullStack. <br /> Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área tem a oferecer.
                         Estou muito empolgado nesses primeiros passos em minha carreira.</p>
                     <ul className={style.listRedes}>
@@ -38,7 +39,7 @@ export default function Header() {
                     <img src={Eu} alt="minha foto" />
                 </div>
             </div>
-            <q>O sábio não possui todas as respostas, mas ele faz todas as perguntas...</q>
+            <p><q> Os dois dias mais importantes da sua vida <br /> são o dia em que você nasceu <br /> ... e o dia em que você descobre o porquê.</q><br />Mark Twain</p>
         </div>
     )
 }

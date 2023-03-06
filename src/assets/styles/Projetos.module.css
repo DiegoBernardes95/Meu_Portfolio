@@ -23,6 +23,9 @@
     text-align: center;
     font-size: 21px;
 }
+.textProjetos p:nth-child(2){
+    text-align: start;
+}
 .textProjetos a, .listaProjetos a{
     text-decoration: none;
     color: #fcb201;

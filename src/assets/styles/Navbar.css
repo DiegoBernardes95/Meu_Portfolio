@@ -1,11 +1,10 @@
  .navBar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
     background-color: #fcb201;
-    padding: 1.2rem;
-    z-index: 1;
+    padding: 1.6rem;
+}
+.navLogo{
+    width: 50%;
+    text-align: center;
 }
 
 .navBar h2{
@@ -14,13 +13,10 @@
 }
 
 .listNavbar{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 3rem;
+    justify-content: center;
+    text-align: center;
     font-family: 'Inconsolata', monospace;
     font-size: 20px;
-    transform: translateY(.3rem);
 }
 .listNavbar li a:hover{
     color: #fcb201;
@@ -34,17 +30,15 @@
 }
 
 @media (max-width: 900px) {
-    .navBar{
-        flex-direction: column;
-        text-align: center;
-    }
-    .navBar{
-        padding: 1.6rem;
-    }
     .listNavbar{
         margin-top: 2rem;
         font-size: 18px;
-        gap: 2.3rem;
-        transform: translateX(-1.1rem);
+    }
+    .navLogo{
+        width: auto;
+    }
+    .listNavbar li a:hover{
+        border-radius: 5px;
+        background-color: #c40800;
     }
 }

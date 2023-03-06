@@ -56,12 +56,22 @@
 @media(max-width: 900px){
     .fooTer, .listFooter{
         flex-direction: column;
+        align-items: unset;
+        text-align: center;
+    }
+    .listFooter li{
+        padding: .4rem;
+    }
+    .listFooter li:hover{
+        background-color: #c40800;
+        border-radius: 5px;
+        transition: all ease-in-out .2s;
     }
 
     .listFooter{
         width: auto;
         text-align: center;
         margin: 3rem 0 3rem 0;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
