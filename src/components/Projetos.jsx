@@ -12,7 +12,7 @@ export default function Projeto(){
         <div className={style.projetos}>
             <div className={style.textProjetos}>
                 <h1><a name='Projetos'>Meus Projetos</a></h1>
-                <p>Aqui estão alguns dos projetos - de front-end e back-end - que desenvolvi durante a minha jornada de estudos no Projeto Programadores Cariocas. Para conferir outros projetos, <a href="https://github.com/DiegoBernardes95" target='_blank'>clique aqui</a>.</p>
+                <p>Aqui estão alguns dos projetos - de front-end e back-end - que desenvolvi durante a minha jornada de estudos. <br /> Para conferir outros projetos, <a href="https://github.com/DiegoBernardes95" target='_blank'>clique aqui</a>.</p>
             </div>
             <section className={style.listaProjetos}>
                 <div>

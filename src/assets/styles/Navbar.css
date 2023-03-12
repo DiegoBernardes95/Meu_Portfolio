@@ -19,8 +19,10 @@
     font-size: 20px;
 }
 .listNavbar li a:hover{
-    color: #fcb201;
-    text-shadow: 1px 1px 1px #000;
+    color: #00000091;
+    font-family: 'Ultra', serif;
+    text-shadow: 0 2px #f3705b;
+    font-size: 17px;
     transition: all ease-in .1s;
 }
 
@@ -39,6 +41,9 @@
     }
     .listNavbar li a:hover{
         border-radius: 5px;
+        color: #fcb201;
+        text-shadow: 0 2px #000;
+        font-size: 18px;
         background-color: #c40800;
     }
 }

@@ -43,8 +43,10 @@
 }
 
 .listFooter a:hover{
-    color: #fcb201;
-    text-shadow: 1px 1px 1px #000;
+    color: #000000c8;
+    font-family: 'Ultra', serif;
+    text-shadow: 0 2px #f3705b;
+    font-size: 18px;
     transition: all ease-in .1s;
 }
 
@@ -66,6 +68,8 @@
         color: #fcb201;
         background-color: #c40800;
         border-radius: 5px;
+        font-size: 20px;
+        text-shadow: 0 2px #000;
         transition: all ease-in-out .2s;
     }
     .listFooter{

@@ -16,6 +16,25 @@
     text-shadow: 0 5px #F3705B;
     margin-bottom: 3rem;
 }
+.textBio h1::after{
+    content: '...';
+    animation: piscando 1.8s infinite;
+}
+@keyframes piscando {
+    0%{
+        content: '';
+    }
+    30%{
+        content: '.';
+    }
+
+    70%{
+        content: '..';
+    }
+    100%{
+        content: '...';
+    }
+}
 .textBio p{
     font-family: 'Inconsolata', monospace;
     font-size: 20px;

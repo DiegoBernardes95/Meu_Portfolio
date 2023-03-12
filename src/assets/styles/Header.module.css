@@ -35,33 +35,8 @@
     font-family: 'Ultra', 'serif';
 }
 
-.infoCard h1::after{
-    content: 'Diego Bernardes...';
-    text-shadow: 0 5.5px #C40800;
-    animation: myname ease-in-out 3.5s normal;
-}
-
-@keyframes myname {
-    0%{content: '|';}
-    10%{content: 'D|';}
-    15%{content: 'Di|';}
-    20%{content: 'Die|';}
-    25%{content: 'Dieg|';}
-    30%{content: 'Diego|';}
-    35%{content: 'Diego |';}
-    40%{content: 'Diego B|';}
-    45%{content: 'Diego Be|';}
-    50%{content: 'Diego Ber|';}
-    55%{content: 'Diego Bern|';}
-    60%{content: 'Diego Berna|';}
-    65%{content: 'Diego Bernar|';}
-    70%{content: 'Diego Bernard|';}
-    75%{content: 'Diego Bernarde|';}
-    80%{content: 'Diego Bernardes|';}
-    85%{content: 'Diego Bernardes.|';}
-    90%{content: 'Diego Bernardes..|';}
-    95%{content: 'Diego Bernardes...|';}
-    100%{content: 'Diego Bernardes...';}
+.infoCard h1 span{
+    text-shadow: 0 5px #C40800;
 }
 
 .infoCard p{
