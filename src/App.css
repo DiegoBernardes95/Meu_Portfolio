@@ -7,7 +7,7 @@
 }
 body{
     background-image: linear-gradient(to right top, #081b2e, #091725, #07121c, #050c13, #030405);
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .sectionTitle, .sectionContato, .imgScroll, .imgScrollBio, .sectionIcon, .sectionIconTec, .sectionProjetos{
