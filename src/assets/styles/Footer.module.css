@@ -42,12 +42,23 @@
     font-size: 20px; 
 }
 
-.listFooter a:hover{
-    color: #000000c8;
-    font-family: 'Ultra', serif;
-    text-shadow: 0 2px #f3705b;
-    font-size: 18px;
-    transition: all ease-in .1s;
+.listFooter a{
+    position: relative;
+    padding: .4rem;
+}
+
+.listFooter a::after{
+    content: '';
+    width: 0%;
+    height: 2.5px;
+    background-color: #c40800;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+.listFooter a:hover::after{
+    width: 100%;
 }
 
 .listFooter a{
@@ -61,6 +72,9 @@
         align-items: unset;
         text-align: center;
     }
+    .listFooter a::after{
+        content: none;
+    }
     .listFooter a{
         padding: .4rem;
     }
@@ -69,7 +83,7 @@
         background-color: #c40800;
         border-radius: 5px;
         font-size: 20px;
-        text-shadow: 0 2px #000;
+        text-shadow: 0 1px #000;
         transition: all ease-in-out .2s;
     }
     .listFooter{
