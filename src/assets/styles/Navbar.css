@@ -10,6 +10,7 @@
 .navBar h2{
     font-family: 'Ultra', serif;
     text-shadow: 0 5px #F3705B;
+    cursor: pointer;
 }
 
 .listNavbar{

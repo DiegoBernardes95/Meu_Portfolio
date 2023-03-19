@@ -6,7 +6,7 @@ export default function Footer(){
 
     return(
         <div className={style.fooTer}>
-            <h2>Diego <br /> Bernardes</h2>
+            <h2><a href='#Inicio'>Diego <br /> Bernardes</a></h2>
             <div className={style.listFooter}>
                 <a href="#Sobre">Sobre</a>
                 <a href="#Tecnologias">Tecnologias</a>

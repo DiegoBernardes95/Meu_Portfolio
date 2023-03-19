@@ -20,6 +20,30 @@
     font-size: 20px;
 }
 
+.infoContato p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #c40800;
+    text-shadow: 0 1px #F3705B;
+    position: relative;
+    padding-bottom: .3rem;
+}
+
+.infoContato p a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: #c40800;
+    bottom: 0;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+.infoContato p a:hover::after{
+    width: 100%;
+    
+}
+
 .infoContato ul{
     list-style: none;
     padding: 0;

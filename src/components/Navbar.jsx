@@ -3,11 +3,16 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
 
+    const refreshSite = () => {
+        window.location.reload();
+    }
+
     return (
         <nav class="navbar navbar-expand-lg navbar-dark navBar">
             <div class="container-fluid">
                 <div class="navLogo">
-                    <h2>meu portfolio</h2>
+                    <a name="Inicio"></a>
+                    <h2 onClick={refreshSite}>meu portfolio</h2>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span

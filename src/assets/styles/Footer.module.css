@@ -11,6 +11,11 @@
     text-shadow: 0 5px #F3705B;
 }
 
+.fooTer h2 a{
+    text-decoration: none;
+    color: unset;
+}
+
 .fooTer h2:hover{
     animation: pulsar ease-in-out infinite 1.3s;
 }

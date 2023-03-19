@@ -31,6 +31,13 @@
     color: #fcb201;
 }
 
+:is(.listaProjetos, .textProjetos) a:hover{
+    color: #fcb201;
+    text-shadow: 1.1px 1.1px #C40800;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
 .listaProjetos{
     display: flex;
     justify-content: center;

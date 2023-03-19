@@ -38,11 +38,11 @@ export default function Tecnologias(){
     return(
         <div className={style.tecnologias}>
             <div className={style.textTecno}>
-                <h1><a name='Tecnologias'>Tecnologias</a></h1>
-                <p>Essas são algumas das tecnologias que aprendi a manusear e utilizar nos meus projetos. <br /> Me empenho constantemente para aperfeiçoar minhas técnicas em cada uma delas. </p>
+                <h1 className='sectionTitle'><a name='Tecnologias'>Tecnologias</a></h1>
+                <p className='pScroll'>Essas são algumas das tecnologias que aprendi a manusear e utilizar nos meus projetos. <br /> Me empenho constantemente para aperfeiçoar minhas técnicas em cada uma delas. </p>
             </div>
             <section className={style.imgTecno}>
-                {imgTec.map(logos => <img src={logos.logo} alt="logos" />)}
+                {imgTec.map(logos => <img className='sectionIconTec' src={logos.logo} alt="logos" />)}
             </section>
         </div>
     )
