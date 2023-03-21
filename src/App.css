@@ -6,7 +6,9 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to right top, #081b2e, #091725, #07121c, #050c13, #030405);
+    background-image: url('../src/assets/imagens/background_stars.gif');
+    background-position: 50% 50%;
+    background-attachment: fixed;
     overflow-x: hidden !important;
 }
 

@@ -54,11 +54,12 @@
     padding: 1.2rem;
     border: 2px solid #fcb201;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.558);
 }
 .listaProjetos div:hover{
     animation: vaivem normal .7s;
+    box-shadow: 9px 10px 33px 7px rgb(84, 83, 83);
     transition: ease-in-out box-shadow .5s;
-    box-shadow: 9px 10px 33px 7px indigo;
 }
 
 @keyframes vaivem {

@@ -11,7 +11,21 @@
     font-family: 'Ultra', serif;
     text-shadow: 0 5px #F3705B;
     cursor: pointer;
+    animation: shadowAni .6s 1 ease-in-out;
 }
+
+@keyframes shadowAni{
+    0%{
+        text-shadow: 0 0px #F3705B;
+    }
+    50%{
+        text-shadow: 0 2.5px #F3705B;
+    }
+    100%{
+        text-shadow: 0 5px #F3705B;
+    }
+}
+
 
 .listNavbar{
     justify-content: center;
