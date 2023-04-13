@@ -22,7 +22,7 @@ export default function Header() {
             <div className={style.cardMe}>
                 <div className={style.infoCard}>
                     <h1 className='sectionTitle'>Olá, meu nome é <br /><span>{nameAnimation}</span></h1>
-                    <p className='pScroll'>Sou carioca desde 1995, e atualmente estudo Desenvolvimento Web FullStack. <br /> Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
+                    <p className='pScroll'>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. <br /> Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
                     <ul className={style.listRedes}>
                         <li className='sectionIcon'>
                             <a href="https://www.linkedin.com/in/diegobernardes-webdev/" target='_blank'>
