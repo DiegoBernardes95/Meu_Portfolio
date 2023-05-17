@@ -32,6 +32,9 @@ export default function Tecnologias(){
         },
         {
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+        },
+        {
+            "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg"
         }
     ]
 
@@ -39,7 +42,7 @@ export default function Tecnologias(){
         <div className={style.tecnologias}>
             <div className={style.textTecno}>
                 <h1 className='sectionTitle'><a name='Tecnologias'>Tecnologias</a></h1>
-                <p className='pScroll'>Essas são algumas das tecnologias que aprendi a manusear e utilizar nos meus projetos. <br /> Me empenho constantemente para aperfeiçoar minhas técnicas em cada uma delas. </p>
+                <p className='pScroll'>Essas são algumas das tecnologias que aprendi a manusear e utilizar nos meus projetos. <br /> Me empenho constantemente para aperfeiçoar minha técnica em cada uma delas. </p>
             </div>
             <section className={style.imgTecno}>
                 {imgTec.map(logos => <img className='sectionIconTec' src={logos.logo} alt="logos" />)}
