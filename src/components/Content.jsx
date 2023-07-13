@@ -47,6 +47,7 @@ const Content = () => {
     ]
 
     const hobbies = useRef();
+    const mainHobbies = useRef();
     const [mouseHover, setMouseHover] = useState(false);
 
     const mouseEnter = () => {
@@ -59,8 +60,10 @@ const Content = () => {
     useEffect(() => {
         if(mouseHover){
             hobbies.current.style.zIndex = '2';
+            mainHobbies.current.style.backgroundSize = '120%';
         } else{
             hobbies.current.style.zIndex = "-1";
+            mainHobbies.current.style.backgroundSize = '115%';
         }
     }, [mouseHover])
 
@@ -78,7 +81,7 @@ const Content = () => {
                         <p>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
 
                     </div>
-                    <p className='subTitle'>sobre mim</p>
+                    <p className='subTitle'>1_sobre mim</p>
                 </li>
                 <li id='workArea'></li>
                 <li id='imgIlustrate'>
@@ -120,33 +123,33 @@ const Content = () => {
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <p className='subTitle'>Experiência</p>
+                    <p className='subTitle'>2_Experiência</p>
                 </li>
                 <li id='myDog' className='contentListAll'>
-                    <p className='subTitle'>meu doguinho max</p>
+                    <p className='subTitle'>3_meu doguinho max</p>
                 </li>
                 <li id='formation' className='contentListAll'>
                     <div className='contentAll'>
                         <h3>Ensino Médio</h3>
                         <p>CIEP Federico Fellini - 2017</p>
                         <h3>Desenvolvimento Web</h3>
-                        <p>Resilia Educação & Senac RJ - 550h <br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
+                        <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
 
                     </div>
-                    <p className='subTitle'>Formação</p>
+                    <p className='subTitle'>4_Formação</p>
                 </li>
                 <li id='projects' className='contentListAll'>
                     <div className='contentAll'>
-                        <h3><Link onClick={scrollTop} to="/Projetos">Projetos</Link></h3>
+                        <h3><Link onClick={scrollTop} to="/Meu_Portfolio/Projetos">Projetos</Link></h3>
                     </div>
                 </li>
                 <li id='technologies' className='contentListAll'>
                     <div className='contentAll techLogos'>
                         {imgTec.map(logos => (<img src={logos.logo} alt='' />))}
                     </div>
-                    <p className='subTitle'>Tecnologias</p>
+                    <p className='subTitle'>6_Tecnologias</p>
                 </li>
-                <li id='hobbies' onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}  className='contentListAll'>
+                <li id='hobbies' ref={mainHobbies} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}  className='contentListAll'>
                     <div ref={hobbies} className='myHobbies'>
                         <h3>Hobbies</h3>
                         <ul>
@@ -157,7 +160,7 @@ const Content = () => {
                             <li><img src={programacao} alt="" /> - Estudar programação</li>
                         </ul>
                     </div>
-                    <p className='subTitle'>Hobbies</p>
+                    <p className='subTitle'>7_Hobbies</p>
                 </li>
                 <li id='contact' className='contentListAll'>
                     <div className='contentAll'>

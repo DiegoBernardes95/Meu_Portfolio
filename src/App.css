@@ -90,6 +90,10 @@ body {
   text-decoration: none;
   color: unset;
 }
+.listNavbar a:hover{
+  color: #5f9ea0;
+  font-weight: bold;
+}
 
 /* FIM DO NAVBAR DO PROJETO */
 
@@ -162,10 +166,17 @@ body {
 #myFoto {
   grid-area: myFoto;
   background: url(../public/IMG_20230221_081848_4.jpg) #00000086;
-  background-size: cover;
+  background-size: 115%;
   background-position: 50% 60%;
   background-blend-mode: darken;
+  transition: all .4s ease-in-out;
 }
+#myFoto:hover{
+  background-color: #0000004a;
+  background-size: 120%;
+  cursor: pointer;
+}
+
 
 #aboutMe {
   grid-area: aboutMe;
@@ -182,10 +193,16 @@ body {
 #workArea {
   grid-area: workArea;
   background: url(../public/workArea.jpg) #00000055;
-  background-size: cover;
+  background-size: 115%;
   background-position: 50% 80%;
   background-repeat: no-repeat;
   background-blend-mode: darken;
+  transition: all .4s ease-in-out;
+}
+#workArea:hover{
+  background-color: #0000001b;
+  background-size: 120%;
+  cursor: pointer;
 }
 
 #imgIlustrate {
@@ -237,6 +254,7 @@ body {
 .contentSlide h3 {
   font-family: var(--Anton);
   margin-top: 1rem;
+  color: #ff3f3fba;
 }
 
 .contentSlide span {
@@ -248,10 +266,17 @@ body {
 #myDog {
   grid-area: myDog;
   background: url(../public/doguinho2.jpg) #00000055;
-  background-size: cover;
+  background-size: 115%;
   background-position: 50% 56%;
   background-blend-mode: darken;
   padding: 4rem;
+  transition: all .4s ease-in-out;
+}
+#myDog:hover{
+  background-size: 120%;
+  background-color: #00000031;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
 }
 
 #formation {
@@ -291,14 +316,20 @@ body {
 
 .techLogos img {
   width: 60px;
+  transition: all .4s ease-in-out;
+}
+.techLogos img:hover{
+  scale: 1.2;
+  cursor: pointer;
 }
 
 #hobbies {
   grid-area: hobbies;
   background: url(../public/hobbies2.jpg) #00000055;
-  background-size: cover;
+  background-size: 115%;
   background-position: 50% 50%;
   background-blend-mode: darken;
+  transition: all .4s ease-in-out;
 }
 
 .myHobbies {
@@ -332,6 +363,10 @@ body {
   font-family: var(--Tsukimi);
   font-size: 15px;
   cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+.myHobbies li:hover{
+  scale: 1.1;
 }
 
 .myHobbies li img {
@@ -374,7 +409,7 @@ body {
 
 .listFooter li {
   width: 33.3%;
-  background: #d9d9d9b3;
+  background: #4683b46c;
   font-family: var(--Anton);
 }
 
@@ -386,11 +421,19 @@ body {
   align-items: center;
   text-decoration: none;
 }
+.listFooter a:hover{
+  background: #5f9ea080;
+}
+
+.listFooter img{
+  width: 35px;
+}
 
 .listFooter h3 {
   margin: auto;
   font-size: 19px;
-  color: #00000099;
+  color: #d9d9d9;
+  /* color: #00000099; */
 }
 
 /* PÁGINA DE EXIBIÇÃO DOS PROJETOS */
@@ -422,7 +465,7 @@ body {
   background-position: 50% 50% !important;
 }
 .projectImg{
-  background-color: #0000006e !important;
+  background-color: #0000003a !important;
 }
 
 .titleProject, .descriptionProject{
@@ -433,7 +476,12 @@ body {
 
 .titleProject{
   background: #5f9ea080;
+  color: #d9d9d9;
 }
+.titleProject span{
+  color: #ff3f3fb1;
+}
+
 .descriptionProject{
   background: #4683b46c;
 }
@@ -455,10 +503,15 @@ body {
 }
 .listProjects a{
   text-decoration: none;
-  color: #ff3f3f;
-  font-size: 14px;
+  color: #ff3f3fb1;
+  font-family: var(--Anton);
+  font-size: 15px;
   position: absolute;
   margin-top: 10rem;
+  transition: all .4s ease-in-out;
+}
+.listProjects a:hover{
+  scale: 1.1;
 }
 
 #title1{

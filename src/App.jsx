@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/Meu_Portfolio' element={<Content />}/>
-          <Route path='/Projetos' element={<Projetos />}/>
+          <Route path='/Meu_Portfolio/Projetos' element={<Projetos />}/>
         </Routes>
         <Footer />
       </div>
