@@ -506,12 +506,10 @@ body {
   color: #ff3f3fb1;
   font-family: var(--Anton);
   font-size: 15px;
-  position: absolute;
-  margin-top: 10rem;
-  transition: all .4s ease-in-out;
+  font-weight: lighter;
 }
 .listProjects a:hover{
-  scale: 1.1;
+  transition: all .4s ease-in-out;
 }
 
 #title1{
