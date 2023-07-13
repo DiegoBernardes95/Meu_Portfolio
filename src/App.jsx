@@ -13,7 +13,7 @@ function App() {
       <div className="myContainer">
         <Navbar />
         <Routes>
-          <Route path='/Meu_Portfolio' element={<Content />}/>
+          <Route path='/Diego_Bernardes' element={<Content />}/>
           <Route path='/Projetos' element={<Projetos />}/>
         </Routes>
         <Footer />
