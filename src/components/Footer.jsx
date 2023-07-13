@@ -1,19 +1,27 @@
-import style from '../assets/styles/Footer.module.css'
+import '../App.css';
 
-export default function Footer(){
-
-    const ano = new Date();
-
+const Footer = () => {
     return(
-        <div className={style.fooTer}>
-            <h2><a href='#Inicio'>Diego <br /> Bernardes</a></h2>
-            <div className={style.listFooter}>
-                <a href="#Sobre">Sobre</a>
-                <a href="#Tecnologias">Tecnologias</a>
-                <a href="#Projetos">Projetos</a>
-                <a href="#Contato">Contatos</a>
-            </div>
-            <h6><strong>©{ano.getFullYear()}</strong></h6>
-        </div>
+        <footer className='myFooter'>
+            <ul className='listFooter'>
+                <li>
+                    <a href="https://github.com/DiegoBernardes95" target='_blank'>
+                        <h3>Github</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/diegobernardes-webdev/" target='_blank'>
+                        <h3>LinkedIn</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/diego.dovahkiin/" target='_blank'>
+                        <h3>Instagram</h3>
+                    </a>
+                </li>
+            </ul>
+        </footer>
     )
 }
+
+export default Footer;

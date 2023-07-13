@@ -1,56 +1,52 @@
-import style from '../assets/styles/Projetos.module.css'
-import adoteAqui from '../assets/imagens/Adote_aqui.mp4'
-import codificador from '../assets/imagens/Codificator.mp4'
-import clone from '../assets/imagens/O_Clone.mp4'
-import react from '../assets/imagens/React_Flix.mp4'
-import jsonServer from '../assets/imagens/jsonServer.mp4'
-import sistemaResilia from '../assets/imagens/sistemaResilia.mp4'
+import "../App.css";
 
-export default function Projeto(){
-    return(
-        <div className={style.projetos}>
-            <div className={style.textProjetos}>
-                <h1 className='sectionTitle'><a name='Projetos'>Meus Projetos</a></h1>
-                <p className='pScroll'>Aqui estão alguns dos projetos - de front-end e back-end - que desenvolvi durante a minha jornada de estudos. <br /> Para conferir outros projetos, <a href="https://github.com/DiegoBernardes95" target='_blank'>clique aqui</a>.</p>
-            </div>
-            <section className={style.listaProjetos}>
-                <div className='sectionProjetos'>
-                    <video autoPlay loop muted src={adoteAqui}></video>
-                    <h4>Projeto Adote Aqui</h4>
-                    <p>Um site, utilizando  HTML & CSS, para a ONG fictícia “Adote Aqui”.</p>
-                    <a href="https://diegobernardes95.github.io/Projeto-Adote-Aqui/" target='_blank'>Link do Projeto</a>
-                </div>
-                <div className='sectionProjetos'>
-                    <video autoPlay loop muted src={codificador}></video>
-                    <h4>Projeto Mensagem Oculta</h4>
-                    <p>Codificador e Decodificador de Cifra de César e Base64.</p>
-                    <a href="https://diegobernardes95.github.io/Projeto-Mensagem-Oculta/" target='_blank'>Link do Projeto</a>
-                </div>
-                <div className='sectionProjetos'>
-                    <video autoPlay loop muted src={jsonServer}></video>
-                    <h4>Projeto Json-Server</h4>
-                    <p>Uma API Json-Server que foi utilizada no Projeto React Flix.</p>
-                    <a href="https://github.com/DiegoBernardes95/Projeto-Json-server" target='_blank'>Link do Projeto</a>
-                </div>
-                <div className='sectionProjetos'>
-                    <video autoPlay loop muted src={clone}></video>
-                    <h4>Projeto O Clone</h4>
-                    <p>Clonagem da landing page da Netflix.</p>
-                    <a href="https://diegobernardes95.github.io/O_Clone/" target='_blank'>Link do Projeto</a>
-                </div>
-                <div className='sectionProjetos'>
-                    <video autoPlay loop muted src={react}></video>
-                    <h4>Projeto React Flix</h4>
-                    <p>Um site criado com React que consome a API Json-Server criada anteriormente.</p>
-                    <a href="https://davijust.github.io/Home/" target='_blank'>Link do Projeto</a>
-                </div>
-                <div className='sectionProjetos'>
-                    <video autoPlay loop muted src={sistemaResilia}></video>
-                    <h4>Projeto Sistema Resilia</h4>
-                    <p>Projeto de modelagem de um banco de dados destinado ao gerenciamento de uma instituição educacional.</p>
-                    <a href="https://github.com/DiegoBernardes95/Sistema_Resilia" target='_blank'>Link do Projeto</a>
-                </div>
-            </section>
-        </div>
+const Projetos = () => {
+    const goToProject = (urlProject) => {
+        window.location.href = urlProject;
+    }
+
+    return (
+        <main className="myProjects">
+            <ul className="listProjects">
+                {/* PRIMEIRO PROJETO */}
+                <li id="title1" className="titleProject">
+                    <h3>Projeto <br />"O Clone"</h3>
+                </li>
+                <li id="project1" className="projectImg"></li>
+                <li id="description1" className="descriptionProject">
+                    <p>Projeto de clonagem da landing page da Netflix.<br />Feito com HTML, CSS e JavaScript puro para exercitar os conhecimentos básicos nestas tecnologias. <br /></p>
+                    <a href="https://diegobernardes95.github.io/O_Clone/" target="_blank">Acessar projeto</a>
+                </li>
+                {/* SEGUNDO PROJETO */}
+                <li id="title2" className="titleProject">
+                    <h3>Projeto <br />"Decodificador"</h3>
+                </li>
+                <li id="project2" className="projectImg"></li>
+                <li id="description2" className="descriptionProject">
+                    <p>Codificador e Decodificador de Cifra de César e Base64. <br />Projeto desenvolvido no curso "Programadores Cariocas" com a intenção de exercitar a manipulação do DOM.</p>
+                    <a href="https://diegobernardes95.github.io/Projeto-Mensagem-Oculta/" target="_blank">Acessar projeto</a>
+                </li>
+                {/* TERCEIRO PROJETO */}
+                <li id="title3" className="titleProject">
+                    <h3>Projeto <br />"Sweet Cine"</h3>
+                </li>
+                <li id="project3" className="projectImg"></li>
+                <li id="description3" className="descriptionProject">
+                    <p>O projeto Sweet Cine foi criado com o intuito de conceder ao usuário um lugar para guardar suas experiências no cinema, catalogando seus filmes assistidos e cinemas frequentados e fornecendo um levantamento sobre os dados armazenados.</p>
+                    <a href="https://github.com/DiegoBernardes95/Sweet_Cine" target="_blank">Link do projeto</a>
+                </li>
+                {/* QUARTO PROJETO */}
+                <li id="title4" className="titleProject">
+                    <h3>Projeto <br />"Adote aqui!"</h3>
+                </li>
+                <li id="project4" className="projectImg"></li>
+                <li id="description4" className="descriptionProject">
+                    <p>Projeto desenvolvido no curso "Programadores Cariocas", utilizando HTML & CSS, para a ONG fictícia “Adote Aqui”.</p>
+                    <a href="https://diegobernardes95.github.io/Projeto-Adote-Aqui/" target="_blank">Acessar projeto</a>
+                </li>
+            </ul>
+        </main>
     )
 }
+
+export default Projetos;
