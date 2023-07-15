@@ -335,13 +335,8 @@ body {
 }
 .contentProjects p{
   font-size: 18px;
-  /* background: #4683b4e8; */
   background: #0F1A20;
-  /* background-color: #A52A2A; */
-  /* font-weight: bolder; */
   text-shadow: 1px 1px #000;
-  /* border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #d9d9d9; */
   font-family: var(--Tsukimi);
   padding: 2rem 3rem 2rem 3rem;
   width: 100%;
