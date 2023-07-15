@@ -241,6 +241,56 @@ const Content = () => {
                                 </div>
                             </div>
                         </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectFive'>
+                                <h3>Projeto <span>"Calculadora"</span></h3>
+                                <p>Projeto desenvolvido com a finalidade de exercitar minhas habilidades em HTML, CSS e JS. <br />A calculadora executa operações de soma, subtração, divisão e multiplicação.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://diegobernardes95.github.io/Projeto-Calculadora/" target='_blank'>4_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectSix'>
+                                <h3>Projeto <span>"Página Pessoal"</span></h3>
+                                <p>Meu primeiro projeto do curso de Desenvolvimento Web Fullstack.<br />A proposta aqui é fazer uma página de apresentação pessoal utilizando as habilidades adquiridas nas primeiras semanas do curso.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://diegobernardes95.github.io/Projeto_Pagina_Pessoal/" target='_blank'>4_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectSeven'>
+                                <h3>Projeto <span>"FrontEnders"</span></h3>
+                                <p>Projeto desenvolvido em grupo - focado no front-end. <br />A proposta era de apresentar a nova ferramenta criada pela empresa fictícia "FrontEnders".</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://diegobernardes95.github.io/Projeto-FrontEnders/index.html" target='_blank'>4_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectEight'>
+                                <h3>Projeto <span>"Candy Store"</span></h3>
+                                <p>Primeiro projeto em grupo do curso de Desenvolvimento Web FullStack. <br /> O objetivo do projeto era desenvolver um site utilizando todo conhecimento adquirido sobre HTML, CSS e JavaScript no módulo.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://zoedoceamarga.github.io/Projeto-em-grupo-Mod.1/" target='_blank'>4_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectNine'>
+                                <h3>Projeto <span>"React Flix"</span></h3>
+                                <p>Projeto desenvolvido no intuito de praticar React e Json-server. <br />Módulo 3 do curso de Desenvolvimento Web FullStack.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://davijust.github.io/Home" target='_blank'>4_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#allProjects" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

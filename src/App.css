@@ -300,6 +300,10 @@ body {
 #projects h3 {
   color: #d9d9d9;
   cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+#projects h3:hover{
+  scale: 1.1;
 }
 /* CÓDIGO PARA EXIBIR A LISTA DE PROJETOS */
 #allProjects{
@@ -346,7 +350,7 @@ body {
   gap: 1.5rem;
 }
 .btnProjects button:nth-child(2), .btnProjects a{
-  padding: .6rem;
+  padding: .3rem .6rem .3rem .6rem;
   border-radius: 5px;
 }
 .btnProjects button:hover{
@@ -379,6 +383,21 @@ body {
 }
 #projectFour{
   background: url(../public/projeto_adoteAqui.png);
+}
+#projectFive{
+  background: url(../public/projeto_calculadora.png);
+}
+#projectSix{
+  background: url(../public/projeto_pagina_pessoal.png);
+}
+#projectSeven{
+  background: url(../public/projeto_frontenders.png);
+}
+#projectEight{
+  background: url(../public/projeto_candy_store.png);
+}
+#projectNine{
+  background: url(../public/projeto_react_flix.png);
 }
 
 /* FIM DO CÓDIGO PARA EXIBIR A LISTA DE PROJETOS */
