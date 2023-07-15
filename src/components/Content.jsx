@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../App.css';
 import development from '/public/development.png';
 import desk from '/public/desk.png';
@@ -10,6 +9,7 @@ import series from '/public/series.png'
 import programacao from '/public/programacao-da-web.png'
 
 const Content = () => {
+
     const imgTec = [
         {
             "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
@@ -58,28 +58,61 @@ const Content = () => {
     }
 
     useEffect(() => {
-        if(mouseHover){
+        if (mouseHover) {
             hobbies.current.style.zIndex = '2';
             mainHobbies.current.style.backgroundSize = '120%';
-        } else{
+        } else {
             hobbies.current.style.zIndex = "-1";
             mainHobbies.current.style.backgroundSize = '115%';
         }
     }, [mouseHover])
 
-    const scrollTop = () => {
-        window.scrollTo({top: 0, behavior: "smooth"});
+    // CÓDIGO PARA A LISTAGEM DE PROJETOS
+    const allProjects = useRef();
+    const projectTitle = useRef();
+    const [projectsCarousel, setProjectsCarousel] = useState(false);
+
+    const showProjects = () => {
+        if (!projectsCarousel) {
+            setProjectsCarousel(true);
+            allProjects.current.style.display = "flex"
+            allProjects.current.scrollIntoView({ behavior: "smooth" });
+        } else if (projectsCarousel) {
+            setProjectsCarousel(false);
+            allProjects.current.style.display = "none";
+            projectTitle.current.scrollIntoView({ behavior: "smooth" });
+        }
     }
+    // FIM DO CÓDIGO PARA LISTAGEM DE PROJETOS
+
+    // FUNÇÕES DO NAVBAR
+    const aboutMe = useRef()
+    const showAboutMe = () => {
+        aboutMe.current.scrollIntoView({ behavior: "smooth" });
+    }
+    const reload = () => {
+        window.location.reload(1);
+    }
+    // FIM DA FUNÇÕES DO NAVBAR
 
     return (
         <main className='myContent'>
+            <nav className='myNavbar'>
+                <div className='titleNavbar'>
+                    <h3>Diego Bernardes</h3>
+                </div>
+                <ul className='listNavbar'>
+                    <li onClick={reload}>Home</li>
+                    <li onClick={showAboutMe}>Sobre</li>
+                    <li onClick={showProjects}>Projetos</li>
+                </ul>
+            </nav>
             <ul className='listContent'>
                 <li id='myFoto'></li>
-                <li id='aboutMe' className='contentListAll'>
+                <li id='aboutMe' ref={aboutMe} className='contentListAll'>
                     <div className='contentAll aboutMeContent'>
                         <h3>Meu nome é <br />Diego Bernardes</h3>
                         <p>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
-
                     </div>
                     <p className='subTitle'>1_sobre mim</p>
                 </li>
@@ -129,18 +162,35 @@ const Content = () => {
                     <p className='subTitle'>3_meu doguinho max</p>
                 </li>
                 <li id='formation' className='contentListAll'>
-                    <div className='contentAll'>
-                        <h3>Ensino Médio</h3>
-                        <p>CIEP Federico Fellini - 2017</p>
-                        <h3>Desenvolvimento Web</h3>
-                        <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
-
+                    <div id="carouselExample3" class="carousel slide slideExperience">
+                        <div class="carousel-inner contentSlideExperience">
+                            <div class="carousel-item active">
+                                <div className='contentSlide'>
+                                    <h3>Desenvolvimento Web</h3>
+                                    <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div className='contentSlide'>
+                                    <h3>Ensino Médio</h3>
+                                    <p>CIEP Federico Fellini - 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                     <p className='subTitle'>4_Formação</p>
                 </li>
-                <li id='projects' className='contentListAll'>
+                <li id='projects' onClick={showProjects} ref={projectTitle} className='contentListAll'>
                     <div className='contentAll'>
-                        <h3><Link onClick={scrollTop} to="/Meu_Portfolio/Projetos">Projetos</Link></h3>
+                        <h3>Projetos</h3>
                     </div>
                 </li>
                 <li id='technologies' className='contentListAll'>
@@ -149,7 +199,59 @@ const Content = () => {
                     </div>
                     <p className='subTitle'>6_Tecnologias</p>
                 </li>
-                <li id='hobbies' ref={mainHobbies} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}  className='contentListAll'>
+                <li id='allProjects' ref={allProjects} className='carousel slide'>
+                    <div class="carousel-inner contentListProjects">
+                        <div class="carousel-item active">
+                            <div className='contentProjects' id='projectOne'>
+                                <h3>Projeto <span>"O Clone"</span></h3>
+                                <p>Projeto de clonagem da landing page da Netflix.<br />Feito com HTML, CSS e JavaScript puro para exercitar os conhecimentos básicos nestas tecnologias.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://diegobernardes95.github.io/O_Clone/" target='_blank'>1_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectTwo'>
+                                <h3>Projeto <span>"Decodificador"</span></h3>
+                                <p>Codificador e Decodificador de Cifra de César e Base64.<br />Projeto desenvolvido no curso "Programadores Cariocas" com a intenção de exercitar a manipulação do DOM.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://diegobernardes95.github.io/Projeto-Mensagem-Oculta/" target='_blank'>2_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectThree'>
+                                <h3>Projeto <span>"Sweet Cine"</span></h3>
+                                <p>O projeto Sweet Cine foi criado com o intuito de conceder ao usuário um lugar para guardar suas experiências no cinema, <br />catalogando seus filmes assistidos e cinemas frequentados e fornecendo um levantamento sobre os dados armazenados.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://github.com/DiegoBernardes95/Sweet_Cine" target='_blank'>3_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div className='contentProjects' id='projectFour'>
+                                <h3>Projeto <span>"Adote Aqui"</span></h3>
+                                <p>Projeto desenvolvido no curso "Programadores Cariocas", utilizando HTML & CSS, para a ONG fictícia “Adote Aqui”.</p>
+                                <div className='btnProjects'>
+                                    <button><a href="https://diegobernardes95.github.io/Projeto-Adote-Aqui/" target='_blank'>4_Acessar projeto</a></button>
+                                    <button onClick={showProjects}>Ocultar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#allProjects" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#allProjects" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </li>
+                <li id='hobbies' ref={mainHobbies} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='contentListAll'>
                     <div ref={hobbies} className='myHobbies'>
                         <h3>Hobbies</h3>
                         <ul>
@@ -177,5 +279,4 @@ const Content = () => {
         </main>
     )
 }
-
 export default Content;
