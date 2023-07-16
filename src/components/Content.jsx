@@ -1,12 +1,14 @@
 import '../App.css';
 import development from '/public/development.png';
 import desk from '/public/desk.png';
+import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import corrida from '/public/silhueta-do-corredor-correndo-rapido.png'
 import musica from '/public/reprodutor-de-musica.png'
 import cinema from '/public/pipoca.png'
 import series from '/public/series.png'
 import programacao from '/public/programacao-da-web.png'
+import gmail from '/public/gmail.png'
 
 const Content = () => {
 
@@ -99,7 +101,7 @@ const Content = () => {
         <main className='myContent'>
             <nav className='myNavbar'>
                 <div className='titleNavbar'>
-                    <h3>Diego Bernardes</h3>
+                    <h3><Link to='/Meu_Portfolio'>Diego Bernardes</Link></h3>
                 </div>
                 <ul className='listNavbar'>
                     <li onClick={reload}>Home</li>
@@ -111,7 +113,7 @@ const Content = () => {
                 <li id='myFoto'></li>
                 <li id='aboutMe' ref={aboutMe} className='contentListAll'>
                     <div className='contentAll aboutMeContent'>
-                        <h3>Meu nome é <br />Diego Bernardes</h3>
+                        <h3>Meu nome é <br /><span>Diego Bernardes</span></h3>
                         <p>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
                     </div>
                     <p className='subTitle'>1_sobre mim</p>
@@ -315,11 +317,14 @@ const Content = () => {
                     <p className='subTitle'>7_Hobbies</p>
                 </li>
                 <li id='contact' className='contentListAll'>
-                    <div className='contentAll'>
+                    <div className='contentAll contactContent'>
                         <h3>Contato</h3>
                         <p>Visite minhas redes sociais e confira meus projetos no <a href="https://github.com/DiegoBernardes95" target='_blank'>GitHub</a>.</p>
                         <p>Você é muito bem-vindo!</p>
-                        <p><a href="mailto:dcb1618@gmail.com">dcb1618@gmail.com</a></p>
+                        <p><a href="mailto:dcb1618@gmail.com">
+                            <img src={gmail} alt="" />
+                            dcb1618@gmail.com
+                        </a></p>
                     </div>
                 </li>
                 <li id='imgIlustrate2'>

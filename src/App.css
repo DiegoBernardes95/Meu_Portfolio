@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cutive+Mono&family=Grandiflora+One&family=Monoton&family=Nixie+One&family=Tsukimi+Rounded:wght@300&family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cutive+Mono&family=Grand+Hotel&family=Grandiflora+One&family=Monoton&family=Nixie+One&family=Noto+Sans+JP&family=Tsukimi+Rounded:wght@300&family=Zeyada&display=swap');
 
 * {
   padding: 0;
@@ -9,6 +9,8 @@
 :root {
   --Anton: 'Anton', sans-serif;
   --Tsukimi: 'Tsukimi Rounded', sans-serif;
+  --Noto: 'Noto Sans JP', sans-serif;
+  --grandHotel : 'Grand Hotel', cursive;
 }
 
 body {
@@ -65,7 +67,12 @@ body {
   padding: 1rem 1rem 1rem 1rem;
 }
 
-.titleNavbar h3 {
+.titleNavbar a{
+  text-decoration: none;
+  color: unset;
+}
+
+.titleNavbar h3{
   text-shadow: 1px 1px 10px #000000ae;
   margin: auto;
   text-align: center;
@@ -178,6 +185,9 @@ body {
   grid-area: aboutMe;
   background: #4683b48c;
   padding: 0 4.5rem 0 4.5rem;
+}
+.aboutMeContent span{
+  color: #ff3f3fba;
 }
 
 .aboutMeContent p {
@@ -328,7 +338,7 @@ body {
   gap: 1rem;
   background-size: cover !important;
   background-blend-mode: darken !important;
-  background-color: #000000b8 !important;
+  background-color: #000000c3 !important;
   background-attachment: fixed !important;
 }
 .contentProjects h3{
@@ -357,10 +367,10 @@ body {
   scale: 1.1;
 }
 .btnProjects a{
-  background: #ff3f3f !important;
+  background: #ff3f3fc9 !important;
 }
 .btnProjects button:nth-child(2){
-  background: #4683b4 !important;
+  background: #4683b4d2 !important;
 }
 .btnProjects button, .btnProjects a{
   background: unset;
@@ -478,6 +488,16 @@ body {
   grid-area: contact;
   background: #5f9ea095;
 }
+.contactContent h3{
+  color: #ff3f3fba;
+}
+.contactContent a{
+  font-size: 14px;
+}
+.contactContent img{
+  width: 50px;
+  margin-right: .4rem;
+}
 
 #imgIlustrate2 {
   grid-area: imgIlustrate2;
@@ -502,14 +522,13 @@ body {
   gap: .4rem;
   list-style: none;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   padding: 0;
   margin: 0;
 }
 
 .listFooter li {
   width: 33.3%;
-  background: #4683b46c;
   font-family: var(--Anton);
 }
 
@@ -520,20 +539,51 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-.listFooter a:hover{
-  background: #5f9ea080;
+  gap: .4rem;
+  transition: all .4s ease-in-out;
 }
 
 .listFooter img{
-  width: 35px;
+  width: 27px;
+  margin: 0;
 }
 
 .listFooter h3 {
-  margin: auto;
-  font-size: 19px;
+  margin: auto 0;
+  font-size: 20px;
   color: #d9d9d9;
 }
+
+.listFooter li:nth-child(1) a{
+  background: #1C1C1C;
+}
+.listFooter li:nth-child(1) a:hover{
+  background: #363636;
+}
+.listFooter li:nth-child(1) h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.listFooter li:nth-child(2) a{
+  font-family: var(--Noto);
+  font-weight: bold;
+  gap: 0;
+  background: #157aada9;
+}
+.listFooter li:nth-child(2) a:hover{
+  background: #157bad;
+}
+
+.listFooter li:nth-child(3) h3{
+  font-family: var(--grandHotel);
+  font-size: 25px;
+}
+.listFooter li:nth-child(3) a{
+  background: #ff3f3fa5;
+}
+.listFooter li:nth-child(3) a:hover{
+  background: #ff3f3fd1;
+}
+
 
 @media(max-width: 1000px) {
   .myNavbar {
@@ -609,5 +659,12 @@ body {
 
   :is(#imgIlustrate, #imgIlustrate2) img {
     width: 14rem;
+  }
+
+  .listFooter h3{
+    font-size: 17px;
+  }
+  .listFooter li:nth-child(3) h3{
+    font-size: 21px;
   }
 }
