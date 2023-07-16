@@ -619,9 +619,13 @@ body {
       'allProjects'
       'technologies'
       'hobbies'
-      'contact'
       'imgIlustrate2'
+      'contact'
+      
     ;
+  }
+  #imgIlustrate, #imgIlustrate2{
+    display: none;
   }
   .listContent li{
     border: none;
