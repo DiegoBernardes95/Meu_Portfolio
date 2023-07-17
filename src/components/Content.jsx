@@ -244,16 +244,6 @@ const Content = () => {
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div className='contentProjects' id='projectFive'>
-                                <h3>Projeto <span>"Calculadora"</span></h3>
-                                <p>Projeto desenvolvido com a finalidade de exercitar minhas habilidades em HTML, CSS e JS. <br />A calculadora executa operações de soma, subtração, divisão e multiplicação.</p>
-                                <div className='btnProjects'>
-                                    <button><a href="https://diegobernardes95.github.io/Projeto-Calculadora/" target='_blank'>4_Acessar projeto</a></button>
-                                    <button onClick={showProjects}>Ocultar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
                             <div className='contentProjects' id='projectSix'>
                                 <h3>Projeto <span>"Página Pessoal"</span></h3>
                                 <p>Meu primeiro projeto do curso de Desenvolvimento Web Fullstack.<br />A proposta aqui é fazer uma página de apresentação pessoal utilizando as habilidades adquiridas nas primeiras semanas do curso.</p>
