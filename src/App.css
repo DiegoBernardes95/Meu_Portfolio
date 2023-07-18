@@ -617,6 +617,9 @@ body {
       
     ;
   }
+  #projects{
+    background-attachment: unset;
+  }
   #imgIlustrate, #imgIlustrate2{
     display: none;
   }
