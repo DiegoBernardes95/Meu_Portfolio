@@ -12,10 +12,9 @@
 
 <h2>🖥️ O projeto</h2>
 
-<h3 align="center">Versão 1.0</h3>
-<img src="https://user-images.githubusercontent.com/113109526/224575285-5d08cd64-4443-4a65-b60c-a76adc8b4234.jpg" />
 <h3 align="center">Versão 2.0</h3>
 <img src="https://github.com/DiegoBernardes95/Meu_Portfolio/assets/113109526/a75fef4b-f055-42ba-bb9b-4e077b5a33f7" />
-
+<h3 align="center">Versão 1.0</h3>
+<img src="https://user-images.githubusercontent.com/113109526/224575285-5d08cd64-4443-4a65-b60c-a76adc8b4234.jpg" />
 
 <p>Para acessar o site do projeto, <a href="https://diegobernardes95.github.io/Meu_Portfolio/">clique aqui</a>.</p>
