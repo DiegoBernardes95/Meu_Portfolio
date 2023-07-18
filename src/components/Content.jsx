@@ -177,7 +177,7 @@ const Content = () => {
                                 <div class="carousel-inner contentSlideExperience">
                                     <div class="carousel-item active">
                                         <div className='contentSlide'>
-                                            <h3>Desenvolvimento Web</h3>
+                                            <h3>Programadores Cariocas</h3>
                                             <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
                                         </div>
                                     </div>
