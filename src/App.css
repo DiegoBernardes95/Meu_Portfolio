@@ -36,9 +36,7 @@ body {
   display: grid;
   grid-template-areas:
     'content'
-    'footer'
   ;
-  gap: .2rem;
 }
 
 /* NAVBAR DO PROJETO */
@@ -112,7 +110,6 @@ body {
     'myFoto myFoto myFoto myFoto aboutMe aboutMe workArea workArea workArea'
     'imgIlustrate imgIlustrate aboutExperience aboutExperience aboutExperience aboutExperience aboutExperience myDog myDog'
     'formation formation formation formation projects projects technologies technologies technologies'
-    'allProjects allProjects allProjects allProjects allProjects allProjects allProjects allProjects allProjects'
     'hobbies hobbies contact contact contact contact contact imgIlustrate2 imgIlustrate2'
   ;
   padding: 0;
@@ -317,11 +314,10 @@ body {
 }
 /* CÓDIGO PARA EXIBIR A LISTA DE PROJETOS */
 #allProjects{
-  grid-area: allProjects;
-  display: none;
+  /* grid-area: allProjects; */
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: .2rem 0 .2rem 0;
   height: 100vh;
 }
 
@@ -512,7 +508,7 @@ body {
 
 /* FOOTER DO PROJETO */
 .myFooter {
-  grid-area: footer;
+  margin-top: .1rem;
 }
 
 .listFooter {
@@ -614,7 +610,6 @@ body {
       'myDog'
       'formation'
       'projects'
-      'allProjects'
       'technologies'
       'hobbies'
       'imgIlustrate2'

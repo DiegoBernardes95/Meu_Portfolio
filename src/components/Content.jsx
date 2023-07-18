@@ -1,4 +1,5 @@
 import '../App.css';
+import React from 'react';
 import development from '/public/development.png';
 import desk from '/public/desk.png';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,7 @@ import cinema from '/public/pipoca.png'
 import series from '/public/series.png'
 import programacao from '/public/programacao-da-web.png'
 import gmail from '/public/gmail.png'
+import Footer from '../components/Footer';
 
 const Content = () => {
 
@@ -70,21 +72,26 @@ const Content = () => {
     }, [mouseHover])
 
     // CÓDIGO PARA A LISTAGEM DE PROJETOS
-    const allProjects = useRef();
     const projectTitle = useRef();
     const [projectsCarousel, setProjectsCarousel] = useState(false);
+    const [scrollProject, setScrollProject] = useState(false);
 
     const showProjects = () => {
         if (!projectsCarousel) {
             setProjectsCarousel(true);
-            allProjects.current.style.display = "flex"
-            allProjects.current.scrollIntoView({ behavior: "smooth" });
+            setScrollProject(false);
         } else if (projectsCarousel) {
             setProjectsCarousel(false);
-            allProjects.current.style.display = "none";
-            projectTitle.current.scrollIntoView({ behavior: "smooth" });
+            setScrollProject(true);
         }
     }
+
+    useEffect(() => {
+        if(scrollProject){
+            projectTitle.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [scrollProject])
+    
     // FIM DO CÓDIGO PARA LISTAGEM DE PROJETOS
 
     // FUNÇÕES DO NAVBAR
@@ -99,109 +106,143 @@ const Content = () => {
 
     return (
         <main className='myContent'>
-            <nav className='myNavbar'>
-                <div className='titleNavbar'>
-                    <h3><Link to='/Meu_Portfolio'>Diego Bernardes</Link></h3>
-                </div>
-                <ul className='listNavbar'>
-                    <li onClick={reload}>Home</li>
-                    <li onClick={showAboutMe}>Sobre</li>
-                    <li onClick={showProjects}>Projetos</li>
-                </ul>
-            </nav>
-            <ul className='listContent'>
-                <li id='myFoto'></li>
-                <li id='aboutMe' ref={aboutMe} className='contentListAll'>
-                    <div className='contentAll aboutMeContent'>
-                        <h3>Meu nome é <br /><span>Diego Bernardes</span></h3>
-                        <p>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
-                    </div>
-                    <p className='subTitle'>1_sobre mim</p>
-                </li>
-                <li id='workArea'></li>
-                <li id='imgIlustrate'>
-                    <img src={desk} alt="" />
-                </li>
-                <li id='aboutExperience'>
-                    <div id="carouselExample" class="carousel slide slideExperience">
-                        <div class="carousel-inner contentSlideExperience">
-                            <div class="carousel-item active">
-                                <div className='contentSlide'>
-                                    <sub>2019 - 2021</sub>
-                                    <h3>Vendedor Autônomo</h3>
-                                    <p>Atuação como vendedor autônomo em plataformas digitais na área de games, tendo como principais atividades a análise de mercado, compra de produtos, upgrade de produtos para revenda, negociação com clientes e venda de produtos seguindo as especificações de upgrade.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div className='contentSlide'>
-                                    <sub>abril/2014 - julho/2014</sub>
-                                    <span className='mt-2'>Pincelart Serviços Promocionais LTDA - ME</span>
-                                    <h3>Repositor</h3>
-                                    <p>Responsável pelo recebimento de mercadorias, organização do estoque, limpeza da área de trabalho, abastecimento de produtos na loja, etc.</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div className='contentSlide'>
-                                    <sub>2013 - 2014</sub>
-                                    <span className='mt-2'>Arcos Dourados Com. de Alimentos LTDA - WLA</span>
-                                    <h3>Atendente de Restaurante</h3>
-                                    <p>Responsável pelo atendimento de clientes, preparação de pedidos, manutenção da area de trabalho, organização de estoque e recebimento de mercadorias.</p>
-                                </div>
-                            </div>
+            {!projectsCarousel ? (
+                <React.Fragment>
+                    <nav className='myNavbar'>
+                        <div className='titleNavbar'>
+                            <h3><Link to='/Meu_Portfolio'>Diego Bernardes</Link></h3>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <p className='subTitle'>2_Experiência</p>
-                </li>
-                <li id='myDog' className='contentListAll'>
-                    <p className='subTitle'>3_meu doguinho max</p>
-                </li>
-                <li id='formation' className='contentListAll'>
-                    <div id="carouselExample3" class="carousel slide slideExperience">
-                        <div class="carousel-inner contentSlideExperience">
-                            <div class="carousel-item active">
-                                <div className='contentSlide'>
-                                    <h3>Desenvolvimento Web</h3>
-                                    <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
-                                </div>
+                        <ul className='listNavbar'>
+                            <li onClick={reload}>Home</li>
+                            <li onClick={showAboutMe}>Sobre</li>
+                            <li onClick={showProjects}>Projetos</li>
+                        </ul>
+                    </nav>
+                    <ul className='listContent'>
+                        <li id='myFoto'></li>
+                        <li id='aboutMe' ref={aboutMe} className='contentListAll'>
+                            <div className='contentAll aboutMeContent'>
+                                <h3>Meu nome é <br /><span>Diego Bernardes</span></h3>
+                                <p>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
                             </div>
-                            <div class="carousel-item">
-                                <div className='contentSlide'>
-                                    <h3>Ensino Médio</h3>
-                                    <p>CIEP Federico Fellini - 2017</p>
+                            <p className='subTitle'>1_sobre mim</p>
+                        </li>
+                        <li id='workArea'></li>
+                        <li id='imgIlustrate'>
+                            <img src={desk} alt="" />
+                        </li>
+                        <li id='aboutExperience'>
+                            <div id="carouselExample" class="carousel slide slideExperience">
+                                <div class="carousel-inner contentSlideExperience">
+                                    <div class="carousel-item active">
+                                        <div className='contentSlide'>
+                                            <sub>2019 - 2021</sub>
+                                            <h3>Vendedor Autônomo</h3>
+                                            <p>Atuação como vendedor autônomo em plataformas digitais na área de games, tendo como principais atividades a análise de mercado, compra de produtos, upgrade de produtos para revenda, negociação com clientes e venda de produtos seguindo as especificações de upgrade.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div className='contentSlide'>
+                                            <sub>abril/2014 - julho/2014</sub>
+                                            <span className='mt-2'>Pincelart Serviços Promocionais LTDA - ME</span>
+                                            <h3>Repositor</h3>
+                                            <p>Responsável pelo recebimento de mercadorias, organização do estoque, limpeza da área de trabalho, abastecimento de produtos na loja, etc.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div className='contentSlide'>
+                                            <sub>2013 - 2014</sub>
+                                            <span className='mt-2'>Arcos Dourados Com. de Alimentos LTDA - WLA</span>
+                                            <h3>Atendente de Restaurante</h3>
+                                            <p>Responsável pelo atendimento de clientes, preparação de pedidos, manutenção da area de trabalho, organização de estoque e recebimento de mercadorias.</p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <p className='subTitle'>4_Formação</p>
-                </li>
-                <li id='projects' onClick={showProjects} ref={projectTitle} className='contentListAll'>
-                    <div className='contentAll'>
-                        <h3>Projetos</h3>
-                    </div>
-                </li>
-                <li id='technologies' className='contentListAll'>
-                    <div className='contentAll techLogos'>
-                        {imgTec.map(logos => (<img src={logos.logo} alt='' />))}
-                    </div>
-                    <p className='subTitle'>6_Tecnologias</p>
-                </li>
-                <li id='allProjects' ref={allProjects} className='carousel slide'>
+                            <p className='subTitle'>2_Experiência</p>
+                        </li>
+                        <li id='myDog' className='contentListAll'>
+                            <p className='subTitle'>3_meu doguinho max</p>
+                        </li>
+                        <li id='formation' className='contentListAll'>
+                            <div id="carouselExample3" class="carousel slide slideExperience">
+                                <div class="carousel-inner contentSlideExperience">
+                                    <div class="carousel-item active">
+                                        <div className='contentSlide'>
+                                            <h3>Desenvolvimento Web</h3>
+                                            <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div className='contentSlide'>
+                                            <h3>Ensino Médio</h3>
+                                            <p>CIEP Federico Fellini - 2017</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <p className='subTitle'>4_Formação</p>
+                        </li>
+                        <li id='projects' onClick={showProjects} ref={projectTitle} className='contentListAll'>
+                            <div className='contentAll'>
+                                <h3>Projetos</h3>
+                            </div>
+                        </li>
+                        <li id='technologies' className='contentListAll'>
+                            <div className='contentAll techLogos'>
+                                {imgTec.map(logos => (<img src={logos.logo} alt='' />))}
+                            </div>
+                            <p className='subTitle'>6_Tecnologias</p>
+                        </li>
+
+                        <li id='hobbies' ref={mainHobbies} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='contentListAll'>
+                            <div ref={hobbies} className='myHobbies'>
+                                <h3>Hobbies</h3>
+                                <ul>
+                                    <li><img src={corrida} alt="" /> - Correr</li>
+                                    <li><img src={musica} alt="" /> - Ouvir música</li>
+                                    <li><img src={cinema} alt="" /> - Ir ao cinema</li>
+                                    <li><img src={series} alt="" /> - Assistir séries</li>
+                                    <li><img src={programacao} alt="" /> - Estudar programação</li>
+                                </ul>
+                            </div>
+                            <p className='subTitle'>7_Hobbies</p>
+                        </li>
+                        <li id='contact' className='contentListAll'>
+                            <div className='contentAll contactContent'>
+                                <h3>Contato</h3>
+                                <p>Visite minhas redes sociais e confira meus projetos no <a href="https://github.com/DiegoBernardes95" target='_blank'>GitHub</a>.</p>
+                                <p>Você é muito bem-vindo!</p>
+                                <p><a href="mailto:dcb1618@gmail.com">
+                                    <img src={gmail} alt="" />
+                                    dcb1618@gmail.com
+                                </a></p>
+                            </div>
+                        </li>
+                        <li id='imgIlustrate2'>
+                            <img src={development} alt="" />
+                        </li>
+                    </ul>
+                    <Footer />
+                </React.Fragment>
+            ) : (
+                <div id='allProjects' className='carousel slide'>
                     <div class="carousel-inner contentListProjects">
                         <div class="carousel-item active">
                             <div className='contentProjects' id='projectOne'>
@@ -292,35 +333,8 @@ const Content = () => {
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </li>
-                <li id='hobbies' ref={mainHobbies} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='contentListAll'>
-                    <div ref={hobbies} className='myHobbies'>
-                        <h3>Hobbies</h3>
-                        <ul>
-                            <li><img src={corrida} alt="" /> - Correr</li>
-                            <li><img src={musica} alt="" /> - Ouvir música</li>
-                            <li><img src={cinema} alt="" /> - Ir ao cinema</li>
-                            <li><img src={series} alt="" /> - Assistir séries</li>
-                            <li><img src={programacao} alt="" /> - Estudar programação</li>
-                        </ul>
-                    </div>
-                    <p className='subTitle'>7_Hobbies</p>
-                </li>
-                <li id='contact' className='contentListAll'>
-                    <div className='contentAll contactContent'>
-                        <h3>Contato</h3>
-                        <p>Visite minhas redes sociais e confira meus projetos no <a href="https://github.com/DiegoBernardes95" target='_blank'>GitHub</a>.</p>
-                        <p>Você é muito bem-vindo!</p>
-                        <p><a href="mailto:dcb1618@gmail.com">
-                            <img src={gmail} alt="" />
-                            dcb1618@gmail.com
-                        </a></p>
-                    </div>
-                </li>
-                <li id='imgIlustrate2'>
-                    <img src={development} alt="" />
-                </li>
-            </ul>
+                </div>
+            )}
         </main>
     )
 }
