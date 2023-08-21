@@ -64,10 +64,9 @@ const Content = () => {
     useEffect(() => {
         if (mouseHover) {
             hobbies.current.style.zIndex = '2';
-            mainHobbies.current.style.backgroundSize = '120%';
+            mainHobbies.current.style.backgroundSize = 'cover';
         } else {
             hobbies.current.style.zIndex = "-1";
-            mainHobbies.current.style.backgroundSize = '115%';
         }
     }, [mouseHover])
 

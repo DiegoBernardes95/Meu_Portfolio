@@ -196,7 +196,7 @@ body {
 #workArea {
   grid-area: workArea;
   background: url(../public/workArea.jpg) #00000055;
-  background-size: 115%;
+  background-size: cover;
   background-position: 50% 80%;
   background-repeat: no-repeat;
   background-blend-mode: darken;
@@ -204,7 +204,6 @@ body {
 }
 #workArea:hover{
   background-color: #0000001b;
-  background-size: 120%;
   cursor: pointer;
 }
 
@@ -270,14 +269,13 @@ body {
 #myDog {
   grid-area: myDog;
   background: url(../public/doguinho2.jpg) #00000055;
-  background-size: 115%;
+  background-size: cover;
   background-position: 50% 56%;
   background-blend-mode: darken;
   padding: 4rem;
   transition: all .4s ease-in-out;
 }
 #myDog:hover{
-  background-size: 120%;
   background-color: #00000031;
   transition: all .4s ease-in-out;
   cursor: pointer;
@@ -429,7 +427,8 @@ body {
 #hobbies {
   grid-area: hobbies;
   background: url(../public/hobbies2.jpg) #00000055;
-  background-size: 115%;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
   background-blend-mode: darken;
   transition: all .4s ease-in-out;
