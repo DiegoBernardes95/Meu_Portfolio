@@ -416,7 +416,7 @@ body {
 }
 
 .techLogos img {
-  width: 60px;
+  width: 50px;
   transition: all .4s ease-in-out;
 }
 .techLogos img:hover{
