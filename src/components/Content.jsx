@@ -135,7 +135,7 @@ const Content = () => {
                         <li id='aboutMe' ref={aboutMe} className='contentListAll'>
                             <div className='contentAll aboutMeContent'>
                                 <h3>Meu nome é <br /><span>Diego Bernardes</span></h3>
-                                <p>Sou carioca desde 1995, com formação de nível técnico em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
+                                <p>Sou carioca desde 1995, com formação em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
                             </div>
                             <p className='subTitle'>1_sobre mim</p>
                         </li>
@@ -149,7 +149,7 @@ const Content = () => {
                                     <div class="carousel-item active">
                                         <div className='contentSlide'>
                                             <sub>2019 - 2021</sub>
-                                            <h3>Vendedor Autônomo</h3>
+                                            <h3>Autônomo</h3>
                                             <p>Atuação como vendedor autônomo em plataformas digitais na área de games, tendo como principais atividades a análise de mercado, compra de produtos, upgrade de produtos para revenda, negociação com clientes e venda de produtos seguindo as especificações de upgrade.</p>
                                         </div>
                                     </div>
