@@ -193,7 +193,7 @@ const Content = () => {
                                             <p>Digital Innovation One - 2023<br /><div id='formationParagraph'>Desenvolvimento mobile focado no framework Flutter, para desenvolvimento de aplicações de forma híbrida.</div></p>
                                         </div>
                                     </div>
-                                    <div class="carousel-item active">
+                                    <div class="carousel-item">
                                         <div className='contentSlide'>
                                             <h3>Programadores Cariocas</h3>
                                             <p>Resilia Educação & Senac RJ - 2023<br /><div id='formationParagraph'>Desenvolvimento Web (Front-end e Back-end), com aulas de soft skills para o mercado de trabalho.</div></p>
