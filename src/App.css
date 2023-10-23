@@ -165,7 +165,7 @@ body {
 
 #myFoto {
   grid-area: myFoto;
-  background: url(../public/IMG_20230221_081848_4.jpg) #00000086;
+  background: url(../public/IMG_20230221_081848_4.jpg) #00000041;
   background-size: 115%;
   background-position: 50% 60%;
   background-blend-mode: darken;
@@ -176,7 +176,6 @@ body {
   background-size: 120%;
   cursor: pointer;
 }
-
 
 #aboutMe {
   grid-area: aboutMe;
@@ -312,7 +311,6 @@ body {
 }
 /* CÓDIGO PARA EXIBIR A LISTA DE PROJETOS */
 #allProjects{
-  /* grid-area: allProjects; */
   display: flex;
   align-items: center;
   justify-content: center;
