@@ -63,26 +63,6 @@ const Content = () => {
 
     ]
 
-    const hobbies = useRef();
-    const mainHobbies = useRef();
-    const [mouseHover, setMouseHover] = useState(false);
-
-    const mouseEnter = () => {
-        setMouseHover(true);
-    }
-    const mouseLeave = () => {
-        setMouseHover(false);
-    }
-
-    useEffect(() => {
-        if (mouseHover) {
-            hobbies.current.style.zIndex = '2';
-            mainHobbies.current.style.backgroundSize = 'cover';
-        } else {
-            hobbies.current.style.zIndex = "-1";
-        }
-    }, [mouseHover])
-
     // CÓDIGO PARA A LISTAGEM DE PROJETOS
     const projectTitle = useRef();
     const [projectsCarousel, setProjectsCarousel] = useState(false);
@@ -229,8 +209,8 @@ const Content = () => {
                             <p className='subTitle'>6_Tecnologias</p>
                         </li>
 
-                        <li id='hobbies' ref={mainHobbies} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} className='contentListAll'>
-                            <div ref={hobbies} className='myHobbies'>
+                        <li id='hobbies' className='contentListAll'>
+                            <div className='myHobbies'>
                                 <h3>Hobbies</h3>
                                 <ul>
                                     <li><img src={corrida} alt="" /> - Correr</li>

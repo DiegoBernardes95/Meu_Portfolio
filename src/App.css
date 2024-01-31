@@ -442,7 +442,6 @@ body {
   position: relative;
   height: 35rem;
   width: 100%;
-  z-index: -1;
 }
 
 .myHobbies h3 {
@@ -467,23 +466,23 @@ body {
   border: unset;
 }
 .myHobbies li:hover{
-  scale: 1.1;
+  scale: 1.2;
 }
 
 .myHobbies li img {
   width: 34px;
 }
 
-
 #contact {
   grid-area: contact;
   background: #5f9ea095;
 }
-.contactContent h3{
+.contactContent h3, .contactContent a{
   color: #ff3f3fba;
 }
 .contactContent a{
-  font-size: 14px;
+  font-size: 16px;
+  font-family: var(--Anton);
 }
 .contactContent img{
   width: 50px;
