@@ -115,7 +115,7 @@ const Content = () => {
                         <li id='aboutMe' ref={aboutMe} className='contentListAll'>
                             <div className='contentAll aboutMeContent'>
                                 <h3>Meu nome é <br /><span>Diego Bernardes</span></h3>
-                                <p>Sou carioca desde 1995, com formação em Desenvolvimento Web FullStack. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado nesses primeiros passos em minha carreira.</p>
+                                <p>Sou carioca desde 1995, com formação em Desenvolvimento Web FullStack desde 2022. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado e confiante em minha carreira.</p>
                             </div>
                             <p className='subTitle'>1_sobre mim</p>
                         </li>
