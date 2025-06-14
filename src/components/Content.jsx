@@ -115,7 +115,7 @@ const Content = () => {
                         <li id='aboutMe' ref={aboutMe} className='contentListAll'>
                             <div className='contentAll aboutMeContent'>
                                 <h3>Meu nome é <br /><span>Diego Bernardes</span></h3>
-                                <p>Sou carioca desde 1995, com formação em Desenvolvimento Web FullStack desde 2022. Desde o início da minha jornada tenho me fascinado cada vez mais pelo potencial criativo e inovador que a área de tecnologia tem a oferecer. Estou muito empolgado e confiante em minha carreira.</p>
+                                <p>Tenho 30 anos e moro na cidade do Rio de Janeiro. Sou organizado, pragmático, disciplinado e dedicado na realização de qualquer tarefa sob minha responsabilidade. Valorizo o trabalho em equipe e o compartilhamento de informações e experiências que possam aperfeiçoar minhas habilidades.</p>
                             </div>
                             <p className='subTitle'>1_sobre mim</p>
                         </li>
@@ -127,6 +127,14 @@ const Content = () => {
                             <div id="carouselExample" class="carousel slide slideExperience">
                                 <div class="carousel-inner contentSlideExperience">
                                     <div class="carousel-item active">
+                                        <div className='contentSlide'>
+                                            <sub>2024 - Atualmente</sub>
+                                            <span className='mt-2'>Hogaserv Serviços Para Hotelaria e Gastronomia LTDA</span>
+                                            <h3>Auxiliar de Almoxarifado</h3>
+                                            <p>Responsável por atender, separar, empacotar e despachar os pedidos de compra. Limpeza e organização do estoque, e realização periódica de inventário. Também atuante no setor de arquivamento e na recepção da empresa, efetuando, entre outras tarefas, o faturamento dos pedidos de compra, cotação de frete e rastreio de mercadorias.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
                                         <div className='contentSlide'>
                                             <sub>2019 - 2021</sub>
                                             <h3>Autônomo</h3>
@@ -162,7 +170,7 @@ const Content = () => {
                             <p className='subTitle'>2_Experiência</p>
                         </li>
                         <li id='myDog' className='contentListAll'>
-                            <p className='subTitle'>3_meu doguinho max</p>
+                            <p className='subTitle'>3_meu dog: max</p>
                         </li>
                         <li id='formation' className='contentListAll'>
                             <div id="carouselExample3" class="carousel slide slideExperience">

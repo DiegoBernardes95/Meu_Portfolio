@@ -52,17 +52,20 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-right: 2rem;
+  position: fixed;
+  width: 100%;
+  background-color: #0f1a20;
+  z-index: 2;
 }
 
 .titleNavbar {
-  width: 30%;
-  height: 5rem;
+  width: 22%;
   align-items: center;
   justify-content: center;
   font-family: var(--Anton);
   background: #5f9ea095;
   border-bottom: 1px solid #0F1A20;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: .7rem .5rem;
 }
 
 .titleNavbar a{
@@ -74,6 +77,7 @@ body {
   text-shadow: 1px 1px 10px #000000ae;
   margin: auto;
   text-align: center;
+  font-size: 25px;
 }
 
 .listNavbar {
@@ -85,9 +89,9 @@ body {
 
 .listNavbar li {
   padding: 0;
-  font-family: var(--Tsukimi);
+  font-family: var(--Anton);
   font-size: 14px;
-  color: #d9d9d9;
+  color: #d9d9d9de;
   cursor: pointer;
 }
 .listNavbar li:hover{
@@ -117,7 +121,7 @@ body {
 }
 
 .listContent li {
-  height: 35rem;
+  height: 36rem;
   border: 3px solid #0F1A20;
 }
 
@@ -165,22 +169,21 @@ body {
 
 #myFoto {
   grid-area: myFoto;
-  background: url(../public/IMG_20230221_081848_4.jpg) #00000041;
-  background-size: 115%;
-  background-position: 50% 60%;
+  background: url(../public/IMG_20230221_081848_4.jpg) #00000055;
+  background-size: cover;
+  background-position: center;
   background-blend-mode: darken;
   transition: all .4s ease-in-out;
 }
 #myFoto:hover{
-  background-color: #0000004a;
-  background-size: 120%;
+  background-color: #0000001b;
   cursor: pointer;
 }
 
 #aboutMe {
   grid-area: aboutMe;
   background: #4683b48c;
-  padding: 0 4.5rem 0 4.5rem;
+  padding: 0 4.5rem;
 }
 .aboutMeContent span{
   color: #ff3f3fba;
@@ -288,7 +291,6 @@ body {
   font-size: 13px;
   margin-top: 1rem;
 }
-
 
 #projects {
   grid-area: projects;
@@ -439,8 +441,8 @@ body {
   justify-content: center;
   gap: 1.5rem;
   background: #0000009f;
-  position: relative;
-  height: 35rem;
+  /* position: relative; */
+  height: 100%;
   width: 100%;
 }
 
