@@ -77,7 +77,7 @@ body {
   text-shadow: 1px 1px 10px #000000ae;
   margin: auto;
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .listNavbar {
@@ -590,7 +590,7 @@ body {
     width: 60%;
   }
 
-  .titleNavbar h3 {
+  .titleNavbar h3{
     font-size: 20 px;
   }
 

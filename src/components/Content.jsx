@@ -96,13 +96,32 @@ const Content = () => {
     }
     // FIM DA FUNÇÕES DO NAVBAR
 
+    // CÓDIGO PARA TROCA DE CONTEÚDO DO H3 DO NAVBAR 
+
+    const [titleNav, setTitleNav] = useState(() => !window.matchMedia("(max-width: 1000px)").matches);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 1000px)");
+
+        const handleChange = (e) => {
+            setTitleNav(!e.matches);
+        };
+
+        mediaQuery.addEventListener("change", handleChange);
+
+        return () => {
+            mediaQuery.removeEventListener("change", handleChange);
+        };
+    }, []);
+    
+
     return (
         <main className='myContent'>
             {!projectsCarousel ? (
                 <React.Fragment>
                     <nav className='myNavbar'>
                         <div className='titleNavbar'>
-                            <h3><Link to='/Meu_Portfolio'>Diego Bernardes</Link></h3>
+                            <h3><Link to='/Meu_Portfolio'>{titleNav ? "Diego Bernardes" : "D.B."}</Link></h3>
                         </div>
                         <ul className='listNavbar'>
                             <li onClick={reload}>Home</li>
